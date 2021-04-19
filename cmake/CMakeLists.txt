@@ -2,7 +2,7 @@
 cmake_minimum_required(VERSION 3.18)
 
 # 工程名称
-project(step1)
+project(cmake)
 
 # 设置
 set(CMAKE_CXX_STANDARD 11)
@@ -13,11 +13,11 @@ add_subdirectory(src/math)
 
 
 # 编译源码生成目标
-add_executable(step1 ${DIR_SRCS})
+add_executable(cmake ${DIR_SRCS})
 
-target_include_directories(step1 PUBLIC src/math)
+target_include_directories(cmake PUBLIC src/math)
 
-target_link_libraries(step1 math_utils)
+target_link_libraries(cmake math_utils)
 
 # build lib
 # STATIC->libxxx.a
