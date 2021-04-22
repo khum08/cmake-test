@@ -6,11 +6,14 @@ main: main.o math_max.o math_min.o
 main.o: main.cpp
 	$(CC) -c main.cpp
 
-math_max.o: math_max.h math_max.cpp
+math_max.o: math_max.cpp
 	$(CC) -c math_max.cpp
 
-math_min.o: math_min.h math_min.cpp
+math_min.o: math_min.cpp
 	$(CC) -c math_min.cpp
 
+main2:
+	$(CC) *.cpp -o main2
+
 clean:
-	rm main *.o
+	rm main main2 *.o
